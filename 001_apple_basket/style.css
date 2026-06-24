@@ -1,0 +1,12 @@
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+
+}
+section button {
+    min-width: 100px;
+    min-height: 50px;
+}
