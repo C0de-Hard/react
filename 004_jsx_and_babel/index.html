@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jsx and babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script defer type="text/babel">
+      const h2 = <h2>Intro to JSX</h2>;
+      const list = (
+        <ul>
+          <li>{h2}</li>
+          <li>hello this is Christiano Ronaldo</li>
+          <li>what will u prefer cdn link or the npm-&-cli way</li>
+          <li>we'll be using the cli way from next time</li>
+          <li>
+            <b>
+              but dont forget to implement the source maps(for debugging
+              purposes) if using through npm mode
+            </b>
+          </li>
+          <li>
+            <i>either use --source-maps at last of build-string or add <em>"sourceMaps" : true in .babelrc file</em></i>
+          </li>
+          </ul>
+        );
+        ReactDOM.render(ReactDOM.createRoot(document.getElementById('root')));
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+  </body>
+</html>
