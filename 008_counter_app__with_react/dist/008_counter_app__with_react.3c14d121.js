@@ -17412,10 +17412,21 @@ var _createBasketDefault = parcelHelpers.interopDefault(_createBasket);
 var _button = require("./components/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _createBasketCss = require("./components/CreateBasket.css");
+var _client = require("react-dom/client");
 const LeftArrow = new URL(require("8eac72acccad1f95"));
 const RightArrow = new URL(require("77b332c5869efc53"));
-const basketName1 = "basket 1", appleCount1 = 100, btnUrl1 = RightArrow.href;
-const basketName2 = "basket 2", appleCount2 = 0, btnUrl2 = LeftArrow.href;
+const basketName1 = "basket 1", btnUrl1 = RightArrow.href;
+const basketName2 = "basket 2", btnUrl2 = LeftArrow.href;
+let appleCount2 = 0;
+let appleCount1 = 100;
+function reRender() {
+    const root = (0, _client.createRoot)(document.querySelector("#root"));
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 19,
+        columnNumber: 15
+    }, this));
+}
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -17426,21 +17437,37 @@ function App() {
                     appleCount: appleCount1
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 21,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                    btnUrl: btnUrl1
+                    btnUrl: btnUrl1,
+                    onClick: ()=>{
+                        console.log("right click");
+                        if (appleCount1 > 0) {
+                            appleCount1--;
+                            appleCount2++;
+                            reRender();
+                        }
+                    }
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 22,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                    btnUrl: btnUrl2
+                    btnUrl: btnUrl2,
+                    onClick: ()=>{
+                        console.log("right click");
+                        if (appleCount2 > 0) {
+                            appleCount2--;
+                            appleCount1++;
+                            reRender();
+                        }
+                    }
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 23,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _createBasketDefault.default), {
@@ -17448,13 +17475,13 @@ function App() {
                     appleCount: appleCount2
                 }, void 0, false, {
                     fileName: "App.js",
-                    lineNumber: 24,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "App.js",
-            lineNumber: 20,
+            lineNumber: 24,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -17468,13 +17495,59 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","8eac72acccad1f95":"hAPwh","77b332c5869efc53":"ie2xS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/CreateBasket":"7X7tl","./components/Button":"9AHbE","./components/CreateBasket.css":"2XSDb"}],"hAPwh":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("left_arrow.a43dabba.png") + "?" + Date.now();
+},{"react/jsx-dev-runtime":"dVPUn","./components/CreateBasket":"7X7tl","./components/Button":"9AHbE","./components/CreateBasket.css":"2XSDb","8eac72acccad1f95":"hAPwh","77b332c5869efc53":"ie2xS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-dom/client":"hrvwu"}],"7X7tl":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$bf1f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$bf1f.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bf1f.prelude(module);
 
-},{}],"ie2xS":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("right_arrow.d0d0c8be.png") + "?" + Date.now();
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>function(props) {
+        const { basketName, appleCount } = props;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "details",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: appleCount
+                        }, void 0, false, {
+                            fileName: "components/CreateBasket.js",
+                            lineNumber: 4,
+                            columnNumber: 13
+                        }, this),
+                        " Apples"
+                    ]
+                }, void 0, true, {
+                    fileName: "components/CreateBasket.js",
+                    lineNumber: 4,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: basketName
+                }, void 0, false, {
+                    fileName: "components/CreateBasket.js",
+                    lineNumber: 5,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "components/CreateBasket.js",
+            lineNumber: 3,
+            columnNumber: 12
+        }, this);
+    });
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 
-},{}],"jnFvT":[function(require,module,exports,__globalThis) {
+  $parcel$ReactRefreshHelpers$bf1f.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -19782,59 +19855,7 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7X7tl":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$bf1f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$bf1f.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bf1f.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>function(props) {
-        const { basketName, appleCount } = props;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "details",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: appleCount
-                        }, void 0, false, {
-                            fileName: "components/CreateBasket.js",
-                            lineNumber: 4,
-                            columnNumber: 13
-                        }, this),
-                        " Apples"
-                    ]
-                }, void 0, true, {
-                    fileName: "components/CreateBasket.js",
-                    lineNumber: 4,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: basketName
-                }, void 0, false, {
-                    fileName: "components/CreateBasket.js",
-                    lineNumber: 5,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "components/CreateBasket.js",
-            lineNumber: 3,
-            columnNumber: 12
-        }, this);
-    });
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-
-  $parcel$ReactRefreshHelpers$bf1f.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9AHbE":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9AHbE":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1c2b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$1c2b.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -19845,20 +19866,20 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Button(props) {
-    const { btnUrl } = props;
+function Button({ btnUrl, onClick }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             src: btnUrl,
-            alt: "button"
+            alt: "button",
+            onClick: onClick
         }, void 0, false, {
             fileName: "components/Button.js",
-            lineNumber: 4,
+            lineNumber: 3,
             columnNumber: 17
         }, this)
     }, void 0, false, {
         fileName: "components/Button.js",
-        lineNumber: 4,
+        lineNumber: 3,
         columnNumber: 9
     }, this);
 }
@@ -19872,6 +19893,12 @@ $RefreshReg$(_c, "Button");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2XSDb":[function() {},{}]},["n0fw4","kTBnD"], "kTBnD", "parcelRequire929d", {}, "./", "/", "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2XSDb":[function() {},{}],"hAPwh":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("left_arrow.a43dabba.png") + "?" + Date.now();
+
+},{}],"ie2xS":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("right_arrow.d0d0c8be.png") + "?" + Date.now();
+
+},{}]},["n0fw4","kTBnD"], "kTBnD", "parcelRequire929d", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=008_counter_app__with_react.3c14d121.js.map

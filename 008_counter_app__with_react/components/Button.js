@@ -1,7 +1,6 @@
-function Button(props) {
-    const {btnUrl} = props;
+function Button({btnUrl,onClick}) {
     return (
-        <button><img src={btnUrl} alt="button" /></button>
+        <button><img src={btnUrl} alt="button" onClick={onClick}/></button>
     )
 }
 export default Button;
