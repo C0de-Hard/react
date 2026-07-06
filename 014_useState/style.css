@@ -1,0 +1,32 @@
+.App {width: 200px; height: 200px; background-color: black;} /*NOT WORKING*/
+/* u cant give class to App. Because App is a React component, not a DOM element */
+#root {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    align-items: center;
+    border: 2px solid red;
+    align-items: center;
+    border: 2px solid red;
+    border-radius: 10%;
+    color: whitesmoke;
+}
+.count {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 2rem;
+    
+}
