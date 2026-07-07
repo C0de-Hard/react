@@ -1,0 +1,32 @@
+.card {
+    box-shadow: 0px 1px 3px 0px black;
+    border-radius: 2%;
+    overflow: hidden;
+    height: max(400px,30vh);
+    width: min(350px,50vh);
+    text-align: center;
+
+    cursor: pointer;
+    transition: transform .2s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 0 5px 2px black;
+    transform-origin: center;
+    transform: scale(1.05);
+}
+.card img {
+    height: 50%;
+    width: 100%;
+}
+.details h1 {
+    text-decoration: underline;
+    letter-spacing: 5px;
+}
+.details {
+    height: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
