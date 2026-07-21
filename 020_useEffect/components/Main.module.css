@@ -1,0 +1,8 @@
+.main {
+    margin: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px 40px;
+
+}

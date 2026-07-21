@@ -1,0 +1,148 @@
+.N_B-1q_header {
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  display: flex;
+  box-shadow: 0 1px 5px gray;
+}
+
+.N_B-1q_header button {
+  box-sizing: border-box;
+  border: unset;
+  color: #3b3a3aaa;
+  cursor: pointer;
+  background-color: #80808028;
+  border-radius: 10px;
+  align-items: center;
+  width: fit-content;
+  height: 60%;
+  padding: 5px 10px;
+  font-size: large;
+  display: flex;
+}
+
+.N_B-1q_header button img {
+  width: 50px;
+  height: 50px;
+}
+
+.WCa7bG_search {
+  border: 2px solid #222422;
+  border-radius: 50px;
+  justify-content: space-between;
+  width: 40vw;
+  height: 40px;
+  margin: 30px 0 0 40px;
+  display: flex;
+  overflow: hidden;
+}
+
+.WCa7bG_search:focus-within {
+  box-shadow: 0 0 2px 2px #00000038;
+}
+
+.WCa7bG_search input {
+  box-sizing: border-box;
+  width: 70%;
+  height: inherit;
+  border: unset;
+  caret-color: #000;
+  caret-shape: underscore;
+  margin: 0 0 0 10px;
+  padding: 0 20px;
+  font-size: 2.1rem;
+}
+
+input::placeholder {
+  color: #0000;
+  opacity: 0;
+}
+
+input:focus::placeholder {
+  color: #999;
+  opacity: 1;
+  font-size: 2rem;
+  animation: .8s ease-in-out infinite WCa7bG_blink-cursor;
+}
+
+@keyframes WCa7bG_blink-cursor {
+  from, to {
+    color: #0000;
+  }
+
+  50% {
+    color: #999;
+  }
+}
+
+.WCa7bG_search input:focus {
+  outline: none;
+}
+
+.WCa7bG_search button {
+  height: inherit;
+  transform-origin: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: max(30%, 100px);
+  font-size: 1rem;
+  transform: scale(1.2);
+}
+
+.WCa7bG_search button:hover {
+  cursor: pointer;
+}
+
+.WcK_kW_card {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  width: min(350px, 50vh);
+  transition: transform .2s ease-in-out, box-shadow .1s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 1px 3px #000;
+}
+
+.WcK_kW_card:hover {
+  transform-origin: center;
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 2px #000;
+}
+
+.WcK_kW_card img {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 100%;
+  height: 45%;
+  overflow: hidden;
+  box-shadow: 0 0 5px #000;
+}
+
+.WcK_kW_details h1 {
+  text-decoration: underline;
+}
+
+.WcK_kW_details {
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+  padding: 10px;
+  display: flex;
+}
+
+.SnCtwa_main {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px 40px;
+  margin: 40px 20px;
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+/*# sourceMappingURL=020_useEffect.aa436662.css.map */
