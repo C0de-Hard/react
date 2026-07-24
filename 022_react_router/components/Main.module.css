@@ -1,0 +1,8 @@
+.main {
+  /* margin: 0px 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px 40px;
+  background: linear-gradient(180deg, #f8f3eb 0%, #fffaf4 55%, #f4efe6 100%);
+}

@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(70, 64, 64, 0.213);
+}
+.header button {
+    height: 60%;
+    width: fit-content;
+    background-color: rgba(128, 128, 128, 0.155);
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: unset;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    color: rgba(59, 58, 58, 0.666);
+    cursor: pointer;
+}
+.header button img {
+    width: 50px;
+    height: 50px;
+}
